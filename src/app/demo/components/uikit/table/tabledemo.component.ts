@@ -23,13 +23,9 @@ export class TableDemoComponent implements OnInit {
     hourlyValuesTime: any;
     hourlyValuesTemperature: any;
     hourlyValuesHumidity: any;
-
-
     loading: boolean = true;
 
-    @ViewChild('filter') filter!: ElementRef;
-
-    constructor(private customerService: CustomerService, private productService: ProductService, private http: HttpClient) {
+    constructor( private http: HttpClient) {
         this.conditions = []
         this.hourlyValues = []
         this.hourlyValuesTime = []
@@ -51,6 +47,9 @@ export class TableDemoComponent implements OnInit {
             console.log(this.hourlyValues)
 
             this.hourlyValuesTime = this.conditions.data.hourly.time
+            this.hourlyValuesTemperature = this.conditions.data.hourly.temperature_2m
+            this.hourlyValuesHumidity = this.conditions.data.hourly.relativehumidity_2m
+
             console.log(this.hourlyValuesTime)
         });
 
@@ -61,8 +60,4 @@ export class TableDemoComponent implements OnInit {
         table.filterGlobal((event.target as HTMLInputElement).value, 'contains');
     }
 
-    clear(table: Table) {
-        table.clear();
-        this.filter.nativeElement.value = '';
-    }
 }

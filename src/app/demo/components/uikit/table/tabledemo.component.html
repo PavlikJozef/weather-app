@@ -1,20 +1,8 @@
 <!-- <h1>{{ conditions.data.hourly.time }}</h1> -->
-<table>
-	<tr>
-		<th>datetime</th>
-		<th></th>
-		<th>weathercode</th>
-	</tr>
-	<tr *ngFor="let hourly of hourlyValues.time">
-		<td>{{ hourly }}</td>
-		<td>____|____</td>
-		<td>{{ hourly }}</td>
-	</tr>
-</table>
 <div class="grid">
 	<div class="col-12">
 		<div class="card">
-			<h5>London</h5>
+			<h5>London - (IN PROGRESS)</h5>
 			<p-table #dt1 [value]="hourlyValuesTime" dataKey="id" [rows]="10" [loading]="loading" [rowHover]="true" styleClass="p-datatable-gridlines" [paginator]="true" responsiveLayout="scroll">
 				<ng-template pTemplate="header">
 					<tr>
@@ -45,22 +33,10 @@
 						</th>
 					</tr>
 				</ng-template>
-				<ng-template pTemplate="body" let-hourly>
-					<tr *ngFor="let condition of conditions.data.hourly.time">
+				<ng-template pTemplate="body" let-hourlyTime let-hourly>
+					<tr>
 						<td style="min-width: 12rem;">
-							{{condition}}
-						</td>
-						<td style="min-width: 12rem;">
-							{{condition.data.hourly.weathercode}}
-						</td>
-						<td style="min-width: 14rem;">
-							{{condition.data.hourly.temperature_2m}}
-						</td>
-						<td style="min-width: 10rem;">
-							{{condition.data.hourly.surface_pressure}}
-						</td>
-						<td style="min-width: 10rem;">
-							{{condition.data.hourly.relativehumidity_2m}}
+							{{hourlyTime}}
 						</td>
 					</tr>
 				</ng-template>
