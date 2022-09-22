@@ -1,0 +1,55 @@
+<div class="grid">
+	<div class="col-12 md:col-6">
+		<div class="card p-fluid">
+			<h5>Index Heat Calculator</h5>
+			<div class="field">
+				<label htmlFor="temperature">Temperature</label>
+				<input pInputText name="temperature" type="number" [(ngModel)]="temperature">
+			</div>
+			<div class="field">
+				<label htmlFor="state">Temperature Units</label>
+				<p-dropdown [options]="dropdownItems" optionLabel="name" [(ngModel)]="selectedState"></p-dropdown>
+			</div>
+			<div class="field">
+				<label htmlFor="humidity">Relative Humidity</label>
+				<input pInputText name="humidity" min="0" max="100" type="number" [(ngModel)]="humidity"/>
+			</div>
+			<button (click)="calculate()" pButton label="Calculate"></button>
+		</div>
+	</div>
+	<div class="col-12 md:col-3">
+		<div class="card p-fluid">
+			<h5>Value of heat index</h5>
+			Result:<b> {{ result }}</b>
+		</div>
+	</div>
+	<div class="col-12 md:col-3">
+		<div class="card p-fluid">
+			<h5>List of last 5 values</h5>
+			Values:
+			<b>
+				<ul class="list-none">
+					<li *ngFor="let value of lastValues">
+						<i class="pi pi-play"></i> {{ value }}
+					</li>
+				</ul>
+			</b>
+		</div>
+	</div>
+	<div class="col-12">
+		<div class="card p-fluid">
+			<h5>Legend</h5>
+			<ul class="list-none">
+				<li>			
+					<i class="pi pi-play"></i> Heat Index value cannot be calculated for temperatures less than 26.7°C of 80°F
+				</li>
+				<li>			
+					<i class="pi pi-play"></i> Relative Humidity must be in range between 0 and 100
+				</li>
+				<li>			
+					<i class="pi pi-play"></i> If these requirements are not fulfilled, the result will be 0
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

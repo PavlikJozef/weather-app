@@ -1,0 +1,48 @@
+<h1 class="text-center">Weather app for London</h1>
+<div class="grid">
+    <div class="col-12 lg:col-6 xl:col-3">
+        <div class="card mb-0">
+            <div class="flex justify-content-between mb-3">
+                <div>
+                    <span class="block text-500 font-medium mb-3">Firs tab - Table</span>
+                    <div class="text-900 font-medium text-xl">Weather conditions</div>
+                </div>
+                <div class="flex align-items-center justify-content-center bg-blue-100 border-round" [ngStyle]="{width: '2.5rem', height: '2.5rem'}">
+                    <i class="pi pi-table text-green-500 text-xl"></i>
+                </div>
+            </div>
+            <span class="text-500 font-medium">Weather conditions for </span>
+            <span class="text-green-500">London</span>
+        </div>
+    </div>
+    <div class="col-12 lg:col-6 xl:col-3">
+        <div class="card mb-0">
+            <div class="flex justify-content-between mb-3">
+                <div>
+                    <span class="block text-500 font-medium mb-3">Second tab - Line Chart</span>
+                    <div class="text-900 font-medium text-xl">Time x temperature</div>
+                </div>
+                <div class="flex align-items-center justify-content-center bg-orange-100 border-round" [ngStyle]="{width: '2.5rem', height: '2.5rem'}">
+                    <i class="pi pi-chart-bar text-orange-500 text-xl"></i>
+                </div>
+            </div>
+            <span class="text-500 font-medium">Relationship between values from </span>
+            <span class="text-500"><a href="https://open-meteo.com/en/docs" class="text-orange-500" target="_blank">open.meteo</a></span>
+        </div>
+    </div>
+    <div class="col-12 lg:col-6 xl:col-3">
+        <div class="card mb-0">
+            <div class="flex justify-content-between mb-3">
+                <div>
+                    <span class="block text-500 font-medium mb-3">Third tab - Heat Index</span>
+                    <div class="text-900 font-medium text-xl">Heat Index Calculator</div>
+                </div>
+                <div class="flex align-items-center justify-content-center bg-cyan-100 border-round" [ngStyle]="{width: '2.5rem', height: '2.5rem'}">
+                    <i class="pi pi-sort-numeric-up text-cyan-500 text-xl"></i>
+                </div>
+            </div>
+            <span class="text-500 font-medium">Calculator for  </span>
+            <span class="text-500"><a href="https://www.weather.gov/media/epz/wxcalc/heatIndex.pdf" class="text-blue-500" target="_blank">heat index formula</a></span>
+        </div>
+    </div>
+</div>
