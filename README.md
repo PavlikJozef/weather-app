@@ -1,4 +1,13 @@
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
+# Entry task for UI Developer
+
+The purpose of this project was to create an application that will display the weather conditions for London. The assignment involved the creation of a table that will contain input data from open.meteo, a graph that will display the relationship between time and temperature, and a calculator for calculating the heat index.
+
+> Given time: 1 day, 21 hours, 4 minutes
+> Work time: ca. 8 hours
+
+##### Technologies:
+
+Angular, PrimeNG
 
 ## Development server
 
